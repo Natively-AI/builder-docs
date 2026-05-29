@@ -1,5 +1,5 @@
-<svg width="200" height="32" viewBox="0 0 200 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="176" height="32" viewBox="0 0 176 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="32" height="32" rx="8" fill="#111827"/>
   <path d="M22.8 22H17.9C17.1 22 16.5 21.3 16.8 20.6L18.5 15.7C18.7 15.3 19.1 15 19.6 15H22.5C22.9 15 23.2 15.2 23.4 15.5L25.5 18.2C25.6 18.4 26 18.4 26.1 18.2L27.8 15H30L28 20.4C27.9 20.7 27.5 21 27.1 21H25.7C25.3 21 25 20.8 24.8 20.5L21.8 16.2C21.6 15.9 21.3 16 21.2 16.2L19.8 19.5C19.7 19.7 19.9 19.9 20.1 19.9H22.2L22.8 22Z" fill="white"/>
-  <text x="40" y="22" fill="#111827" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="600" letter-spacing="-0.02em">Native.Builder</text>
+  <text x="40" y="21" fill="#111827" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="600" letter-spacing="-0.03em">Native.Builder</text>
 </svg>

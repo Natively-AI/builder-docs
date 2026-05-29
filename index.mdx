@@ -9,11 +9,12 @@ mode: frame
 <Columns cols={2}>
   <Card
     title="Getting started"
-    icon="factory"
+    icon="rocket"
     href="/introduction/getting-started"
     className="product-guide-feature-card"
     size={64}
   >
+    <span className="product-guide-feature-card-eyebrow">Native.Builder</span>
     <span className="product-guide-feature-card-title">Your software factory</span>
     <span className="product-guide-feature-card-description">
       Describe what you need. Specialized agents plan, build, and ship — without hiring a dev team.
@@ -31,11 +32,19 @@ mode: frame
   <Card title="Workspaces" icon="users" href="/features/workspaces">
     Run the factory with your team — shared projects, roles, and credits.
   </Card>
+
+  <Card title="Join Discord" icon="message-circle" href="https://discord.gg/AqxSSUaHfX">
+    Get faster answers from the team and community.
+  </Card>
 </Columns>
 
 ## Popular guides
 
 <Columns cols={2}>
+  <Card title="Welcome" icon="sparkles" href="/introduction/welcome">
+    What Builder is and how the agent factory works.
+  </Card>
+
   <Card title="Prompting best practices" icon="message-square" href="/features/prompting">
     Direct your agents clearly to get better software, faster.
   </Card>
@@ -46,10 +55,6 @@ mode: frame
 
   <Card title="FAQ" icon="circle-help" href="/introduction/faq">
     How the factory works, credits, publishing, and accounts.
-  </Card>
-
-  <Card title="Get support" icon="life-buoy" href="/support">
-    Report bugs, ask questions, or request features from inside the app.
   </Card>
 </Columns>
 

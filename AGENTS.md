@@ -22,7 +22,17 @@
 | **Credits** | Fuel for agent work — pay for output, not headcount |
 | **Publish** | Ship factory output to a live URL on `*.nativelyai.app` |
 
-Company/domain names (`nativelyai.com`, `Natively AI`) refer to the company and URLs — not the product name.
+## Brand assets
+
+Replace logos by dropping files into `/logo/`:
+
+| File | Used for |
+|------|----------|
+| `logo/light.svg` | Navbar on light mode (dark text/icon) |
+| `logo/dark.svg` | Navbar on dark mode (light text/icon) |
+| `logo/icon.svg` | App icon only (optional favicon source) |
+
+Mintlify reads paths from `docs.json` → `logo.light` and `logo.dark`. SVG or PNG both work. Recommended width: ~176px horizontal wordmark.
 
 ## Style preferences
 

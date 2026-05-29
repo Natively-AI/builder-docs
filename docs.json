@@ -5,8 +5,8 @@
   "description": "Native.Builder is a software factory — specialized AI agents that build and ship products so you save time and money.",
   "colors": {
     "primary": "#7C54FF",
-    "light": "#A78BFA",
-    "dark": "#5B3FD6"
+    "light": "#4366FF",
+    "dark": "#111827"
   },
   "favicon": "/favicon.ico",
   "icons": {
@@ -80,6 +80,7 @@
   },
   "footer": {
     "socials": {
+      "discord": "https://discord.gg/AqxSSUaHfX",
       "linkedin": "https://linkedin.com/company/natively-ai"
     }
   }
