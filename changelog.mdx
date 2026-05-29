@@ -1,60 +1,183 @@
 ---
 title: Changelog
-description: New features, improvements, and fixes shipped in Native.Builder.
+description: What's new in Native.Builder — features, improvements, and fixes you care about.
 ---
 
-Product updates for Native.Builder. For the full technical release notes, see the [conductor-2.0 changelog](https://github.com/Natively-AI/conductor-2.0/tree/dev/changelog).
+Product updates for **Native.Builder**. Only changes that affect how you build, collaborate, and ship are listed here.
 
 ---
 
 ## v1.0.6 — May 2026
 
-### Mobile project experience
+### New
 
-- New mobile header and bottom navigation for switching between chat, preview, tasks, and versions
-- Improved mobile file explorer and responsive project view
+- **Mobile project view** — Switch between chat, preview, tasks, and versions from a mobile header and bottom nav
+- **Tips for next step** — Contextual suggestions in the chat composer after agent responses
+- **Visual edit → chat** — Send visual-edit selections from the preview straight into chat
+- **Clearer ask-question UI** — Agent questions show as full-width buttons, easier to tap on mobile
 
-### Billing improvements
+### Improved
 
-- Promo codes auto-proceed to checkout when valid
-- Plan upgrades wait for payment confirmation before applying
-- Cancelled Stripe checkout returns to billing settings instead of a 404
-- Removed project and member caps on paid Pro plans
-- Stronger credit enforcement across all model flows
+- **Pro plan limits removed** — No more project, member, or deployment caps on Pro
+- **Promo codes** — Valid promo codes continue straight to checkout
+- **Upgrades** — Plan changes apply only after payment is confirmed
+- **Checkout cancel** — Cancelled checkout returns you to billing settings instead of a dead page
+- **Free tier credits** — Clearer credit balance in the sidebar and model picker; friendlier message when you're out of credits
+- **Project thumbnails** — More reliable previews on project cards
 
-### Builder UX
+### Fixed
 
-- Contextual "tips for next step" suggestions in the chat composer
-- Visual edit selections can be sent directly to chat
-- Ask-question options render as full-width stacked buttons
-
-### Domains
-
-- Fixed regression when updating platform subdomains
-
-### Admin (internal)
-
-- Admin billing tooling for customer lookup, promo management, and credit operations
+- **Subdomain updates** — Renaming your platform subdomain works again
+- **Plan picker** — Plan modal behaves correctly inside projects
+- **Chat errors** — Error messages display readable text instead of raw JSON
 
 ---
 
-## v1.0.5 and earlier
+## v1.0.5 — May 2026
 
-See the full release history in the [GitHub changelog directory](https://github.com/Natively-AI/conductor-2.0/tree/dev/changelog).
+### New
 
-### Highlights from v1.0.0
+- **Folder uploads** — Upload entire folders in the code and docs tabs
+- **Drag and drop** — Drop files and folders into the file explorer
+- **Workspace switcher** — Switch workspaces from the sidebar without losing your place
+- **Google account linking** — Connect your Google account from profile settings
+- **Mobile homepage** — Responsive layout for the dashboard on phones and tablets
 
-- Full-stack AI app builder with live preview
-- Project publishing to `*.nativelyai.app`
-- Custom domain support with DNS verification
-- Workspace collaboration with role-based access
-- Credit-based billing with Stripe subscriptions
-- Multiple specialized AI agents (Builder, Product Architect, Feedback, and more)
-- Marketplace for sharing components
-- Version history and revert
+### Improved
+
+- **CSS auto-fix** — CSS syntax errors in preview trigger the same auto-fix flow as JavaScript errors
+- **Preview sync** — Saving a file manually in the editor refreshes the live preview
+- **Model picker** — Premium models are disabled when you have zero credits
+
+### Fixed
+
+- **Agent actions** — Suggest-action flows no longer get stuck on malformed tool responses
+- **Publish button** — Publish is disabled while versions are loading, preventing false "no version" errors
+- **Project layout** — Logo no longer sits flush against the screen edge
+
+---
+
+## v1.0.4 — May 2026
+
+### New
+
+- **In-app help** — Report bugs, ask questions, or request features from the sidebar — no email client required
+- **Discord link** — Join the community directly from the sidebar
+- **Beta banner** — Dismissible banner with a link to Discord for early feedback
+- **Landing page prompts** — A prompt you start on the marketing site carries through login and onboarding into the app
+
+### Improved
+
+- **Chat reliability** — Agent questions stay visible until answered; project context is preserved across flows
+- **Secrets guidance** — Agents are steered away from unsafe manual `.env` handling
+
+### Fixed
+
+- **Diff viewer** — Clear way to exit the file diff view
+- **Workspace members** — Members settings header no longer clips for non-owner roles
+
+---
+
+## v1.0.3 — May 2026
+
+### New
+
+- **Project page sidebar** — Refreshed navigation, project switcher, and chat header on the project screen
+
+### Improved
+
+- **Custom domain DNS** — Copy each line of multi-line TXT records individually when setting up a domain
+
+---
+
+## v1.0.2 — May 2026
+
+### Improved
+
+- **Custom domain DNS** — Per-line copy buttons for multi-line TXT verification records
+
+---
+
+## v1.0.1 — May 2026
+
+### New
+
+- **Marketplace pricing** — Free and premium components; buy ownership of marketplace templates
+- **Sidebar redesign** — Overlay sidebar, flat settings navigation, Home and My Projects always visible
+- **Preview on open** — New projects show a live preview pane before you send your first message
+- **Logout confirmation** — Confirm before signing out
+- **Document uploads** — Attach `.xlsx` and `.pptx` files in chat
+- **Conversation switcher** — Switch between chat threads inside a project
+- **Version labels** — Restore messages show friendly version names instead of raw IDs
+
+### Improved
+
+- **Agent safety** — Agents cannot write real `.env` files; use `.env.example` for placeholders
+- **File errors** — When a file isn't found, agents get helpful suggestions instead of a bare error
+- **Workspace invites** — See the workspace name before accepting; owners can't accidentally join their own invite
+- **Workspace rename** — Press Enter to save; sidebar updates immediately
+- **Project thumbnails** — Sharper, more reliable screenshots on project cards
+
+### Fixed
+
+- **Duplicate projects** — Project list no longer shows duplicates on page load
+- **Preview overlay** — Loading spinner dismisses when the app is actually ready
+- **Preview URL** — Preview link is sent correctly to the iframe
+- **Model picker** — Display and selection bugs resolved
+- **Document editor** — White flash on load removed
+- **Billing UI** — Cancel subscription button hidden on the Free plan
+
+---
+
+## v1.0.0 — May 2026
+
+The first major release of **Native.Builder** — your software factory.
+
+### Build
+
+- **Specialized agents** — Product Architect, Builder agent, Task Planner, and Feedback agent
+- **Chat context menu** — Tag agents, files, and tasks in prompts
+- **Parallel agents** — Multiple agents coordinate without overwriting each other's work
+- **Visual editor** — Click elements in preview and send edits to chat
+- **Code editor** — TypeScript autocomplete, go-to-definition, and import completion in Monaco
+- **Auto-fix** — Runtime errors in preview can trigger automatic repair
+- **File upload in chat** — Attach files to your prompts
+- **Model picker** — Choose from expanded model catalog; bring your own API keys (BYOK)
+- **Partial file edits** — Agents send smaller diffs for faster, cheaper updates
+
+### Documents
+
+- **Docs tab** — Write and edit Markdown documents alongside your code with a rich editor
+- **Volumes** — Separate code and documentation in organized volumes
+- **File history** — View and restore previous versions of files
+- **Binary uploads** — Images, PDFs, and media in your project
+
+### Ship
+
+- **Publish** — Deploy to a live URL on `*.nativelyai.app`
+- **Custom domains** — Connect your own domain with DNS verification
+- **Subdomain rename** — Change your platform subdomain; old URLs redirect for one year
+- **Version history** — Snapshot and revert project versions with screenshot previews
+- **Responsive preview** — Test mobile, tablet, and desktop layouts; open preview in a new tab
+
+### Collaborate
+
+- **Workspaces** — Invite teammates with Owner, Admin, Member, and Viewer roles
+- **Shared credits** — One credit pool per workspace
+
+### Marketplace
+
+- **Component library** — Browse featured and popular components
+- **Categories** — Filter marketplace by category
+- **Store** — Discover and install templates
+
+### Plans
+
+- **Subscriptions and credits** — Free, Builder, Pro, Business, and Scale plans with monthly credits
+- **Plan enforcement** — Project limits, custom domains, and premium models gated by plan
 
 ---
 
 <Note>
-  This page summarizes user-facing changes. Internal migrations, API changes, and operator notes are documented in the engineering changelog.
+  Have feedback on a release? Use **Help** in the app or see [Support](/support).
 </Note>
