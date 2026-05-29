@@ -1,8 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "Natively Docs",
-  "description": "Natively is a software factory — specialized AI agents that build and ship products so you save time and money.",
+  "name": "Native.Builder Docs",
+  "description": "Native.Builder is a software factory — specialized AI agents that build and ship products so you save time and money.",
   "colors": {
     "primary": "#7C54FF",
     "light": "#A78BFA",

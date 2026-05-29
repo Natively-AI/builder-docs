@@ -1,8 +1,8 @@
-# Natively documentation
+# Native.Builder documentation
 
 ## About this project
 
-- Product documentation for [Natively](https://nativelyai.com), built on [Mintlify](https://mintlify.com)
+- Product documentation for [Native.Builder](https://nativelyai.com) (short: **Builder**), built on [Mintlify](https://mintlify.com)
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
 - Run `mint dev` to preview locally
@@ -12,13 +12,17 @@
 
 | Term | Usage |
 |------|--------|
-| **Natively** | Product name — a software factory, not "Conductor" in user-facing docs |
+| **Native.Builder** | Full product name. Short form: **Builder**. Never use "Natively" for the product. |
+| **Builder agent** | The coding agent in the agent roster — always say "Builder agent" to distinguish from the product or the Builder plan |
+| **Builder plan** | The $20/mo subscription tier — always say "Builder plan" to distinguish from the product |
 | **Software factory** | Core positioning — agents produce software on a production line |
 | **Workspace** | The factory floor — team, billing, projects, and members |
 | **Project** | One product run through the factory |
-| **Agent** | A specialist worker (Product Architect, Builder, Task Planner, Feedback) |
+| **Agent** | A specialist worker (Product Architect, Builder agent, Task Planner, Feedback) |
 | **Credits** | Fuel for agent work — pay for output, not headcount |
 | **Publish** | Ship factory output to a live URL on `*.nativelyai.app` |
+
+Company/domain names (`nativelyai.com`, `Natively AI`) refer to the company and URLs — not the product name.
 
 ## Style preferences
 
@@ -28,6 +32,7 @@
 - Bold for UI elements: Click **Settings**
 - Code formatting for file names, commands, paths, and code references
 - Link to the live app at `https://nativelyai.com` when referencing in-product actions
+- First mention on a page: **Native.Builder**. Subsequent mentions in the same section: **Builder**
 
 ## Content boundaries
 

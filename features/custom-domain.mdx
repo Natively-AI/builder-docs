@@ -1,12 +1,12 @@
 ---
 title: Custom domains
-description: Connect your own domain to a published Natively app.
+description: Connect your own domain to a published Builder app.
 ---
 
 Custom domains let you serve your published app from your own URL (e.g., `app.yourcompany.com`) instead of the default `*.nativelyai.app` subdomain.
 
 <Note>
-  Custom domains are available on **Builder** plans and above. Free plans use the default Natively subdomain only.
+  Custom domains are available on **Builder plans** and above. Free plans use the default platform subdomain only.
 </Note>
 
 ## Platform subdomain
@@ -32,7 +32,7 @@ On supported plans, you can **rename** your platform subdomain. Old subdomains r
     Type the domain you want to connect — either a subdomain (`app.example.com`) or an apex domain (`example.com`).
   </Step>
   <Step title="Configure DNS">
-    Natively shows the DNS records you need to add at your domain registrar. The records differ depending on whether you're connecting a subdomain or apex domain:
+    Builder shows the DNS records you need to add at your domain registrar. The records differ depending on whether you're connecting a subdomain or apex domain:
 
     | Domain type | Records |
     |-------------|---------|
@@ -40,7 +40,7 @@ On supported plans, you can **rename** your platform subdomain. Old subdomains r
     | **Apex** (e.g., `example.com`) | A/AAAA records + TXT verification record |
   </Step>
   <Step title="Wait for verification">
-    After adding DNS records, Natively verifies ownership and provisions an SSL certificate. Status updates appear in the domains panel — no page refresh needed.
+    After adding DNS records, Builder verifies ownership and provisions an SSL certificate. Status updates appear in the domains panel — no page refresh needed.
   </Step>
 </Steps>
 
