@@ -12,12 +12,13 @@
 
 | Term | Usage |
 |------|--------|
-| **Natively** | Product name (not "Conductor" in user-facing docs) |
-| **Workspace** | Team/org container for projects, billing, and members |
-| **Project** | A single app being built |
-| **Credits** | Usage unit for AI chat and generation |
-| **Agent** | Specialized AI assistant (Builder, Product Architect, etc.) |
-| **Publish** | Deploy a project to a live URL on `*.nativelyai.app` |
+| **Natively** | Product name — a software factory, not "Conductor" in user-facing docs |
+| **Software factory** | Core positioning — agents produce software on a production line |
+| **Workspace** | The factory floor — team, billing, projects, and members |
+| **Project** | One product run through the factory |
+| **Agent** | A specialist worker (Product Architect, Builder, Task Planner, Feedback) |
+| **Credits** | Fuel for agent work — pay for output, not headcount |
+| **Publish** | Ship factory output to a live URL on `*.nativelyai.app` |
 
 ## Style preferences
 

@@ -3,7 +3,7 @@ title: Prompting best practices
 description: Write effective prompts to get better results from Natively's AI agents.
 ---
 
-The quality of your prompts directly affects the quality of your app. These practices help you build faster and avoid common pitfalls.
+In the Natively factory, prompts are your briefs to the agents on the line. A clear brief means less rework, fewer credits spent, and software shipped faster. These practices help you get production-quality output on the first pass.
 
 ## Start with a clear goal
 
@@ -47,18 +47,18 @@ Don't try to build everything in one prompt. Break work into steps:
   Large, multi-feature prompts often produce incomplete or broken results. Smaller, focused prompts are more reliable.
 </Warning>
 
-## Use the right agent
+## Assign the right agent
 
-Natively offers specialized agents for different tasks:
+Each agent is a specialist on your factory floor — use the right one for the stage you're in:
 
-| Agent | Best for |
-|-------|----------|
-| **Product Architect** | Planning, PRDs, architecture decisions, scoping features |
-| **Builder** | Writing code, implementing features, fixing bugs |
-| **Task Planner** | Breaking features into tasks and managing a task board |
-| **Feedback** | Reporting bugs, requesting features, asking product questions |
+| Agent | Factory role |
+|-------|--------------|
+| **Product Architect** | Planning stage — PRDs, architecture, scoping before code |
+| **Builder** | Production stage — writes code, implements features, fixes bugs |
+| **Task Planner** | Operations — breaks work into tasks, manages the task board |
+| **Feedback** | Quality loop — captures bugs, requests, and product signal |
 
-Switch agents from the agent picker in the chat panel. If you're unsure where to start, Product Architect helps you plan; Builder implements.
+Switch agents from the agent picker in the chat panel. Starting with Product Architect saves credits by preventing expensive rebuilds.
 
 ## Reference what exists
 
