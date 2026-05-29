@@ -1,0 +1,75 @@
+---
+title: Publish your app
+description: Deploy your project to a live URL, share it, and manage published versions.
+---
+
+Publishing deploys your project to a live URL on the Natively platform. Anyone with the link can visit your app — no local preview required.
+
+## What happens when you publish
+
+1. Natively builds your project for production
+2. The built app is deployed to the app gateway
+3. A live URL is assigned: `yourproject.nativelyai.app`
+4. You can share the URL immediately
+
+<Note>
+  Publishing does **not** consume AI credits. Credits are only used for AI chat and generation.
+</Note>
+
+## Publish your project
+
+<Steps>
+  <Step title="Open your project">
+    Navigate to the project you want to publish.
+  </Step>
+  <Step title="Go to publish">
+    Open **Settings → Publish**, or use the publish action in the project toolbar.
+  </Step>
+  <Step title="Click Publish">
+    Natively runs the production build and deploys your app. You'll see build output in the terminal panel.
+  </Step>
+  <Step title="Copy your URL">
+    Once complete, your live URL appears. Copy and share it.
+  </Step>
+</Steps>
+
+## Unpublish
+
+To take your app offline:
+
+1. Open **Settings → Publish**
+2. Click **Unpublish**
+3. The live URL stops serving your app
+
+Your project and code remain intact — only the public deployment is removed.
+
+## Stale deployments
+
+If you've made changes since your last publish, the publish button indicates your deployment is **stale**. Publish again to push the latest version live.
+
+## Branding
+
+| Plan | Branding |
+|------|----------|
+| Free | Natively branding required on published apps |
+| Builder+ | Branding can be removed |
+| Business+ | Branding removed automatically |
+
+## Staged deploys (Business+)
+
+Business and Scale plans support **staged deploys** — separate production and staging environments so you can test before going live. Staged deploys let you validate changes in a staging environment before promoting to production.
+
+## Version history
+
+On paid plans, you can revert to earlier project versions if a publish introduces a problem. Open the **Versions** panel to browse snapshots and restore a previous state.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Custom domains" icon="link" href="/features/custom-domain">
+    Connect your own domain to a published app.
+  </Card>
+  <Card title="Plans & credits" icon="coins" href="/introduction/plans-and-credits">
+    See which publish features your plan includes.
+  </Card>
+</CardGroup>

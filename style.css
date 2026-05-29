@@ -1,9 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap");
+
 :root {
   --default-border-color: var(--gray-200);
 }
 
 .dark {
   --default-border-color: var(--gray-800);
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+#navbar h1,
+#sidebar-title {
+  font-family: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+img.nav-logo {
+  max-width: 140px;
+  height: auto;
 }
 
 #sidebar .nav-dropdown-trigger {
@@ -21,20 +41,7 @@
   background-color: rgb(255 255 255 / 0.06) !important;
 }
 
-#sidebar .nav-dropdown-trigger .nav-dropdown-item-icon {
-  border: none !important;
-  background: transparent !important;
-  height: auto !important;
-  width: auto !important;
-  padding: 0 !important;
-}
-
-.nav-dropdown-content {
-}
-
-.nav-dropdown-content .nav-dropdown-item {
-}
-
+#sidebar .nav-dropdown-trigger .nav-dropdown-item-icon,
 .nav-dropdown-content .nav-dropdown-item-icon {
   border: none !important;
   background: transparent !important;
@@ -55,33 +62,38 @@
   text-transform: uppercase;
 }
 
-body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] {
+body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] {
   color: rgb(var(--primary)) !important;
   font-weight: 600 !important;
 }
 
-body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] span {
+body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] span {
   color: inherit !important;
 }
 
-body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] svg {
+body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] svg {
   background-color: rgb(var(--primary)) !important;
 }
 
-.dark body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] {
-  color: rgb(var(--primary-light)/var(--tw-text-opacity,1)) !important;
+.dark body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] {
+  color: rgb(var(--primary-light) / var(--tw-text-opacity, 1)) !important;
 }
 
-.dark body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] svg {
-  background-color: rgb(var(--primary-light)/var(--tw-text-opacity,1)) !important;
+.dark body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] svg {
+  background-color: rgb(var(--primary-light) / var(--tw-text-opacity, 1)) !important;
 }
 
-:is(#content-area[data-current-path='/'], [data-current-path='/'] #content-area):has([data-product-guide-index]) {
+:is(#content-area[data-current-path="/"], [data-current-path="/"] #content-area):has(
+    [data-product-guide-index]
+  ) {
   background: transparent !important;
   padding: 0 !important;
 }
 
-:is(#content-area[data-current-path='/'], [data-current-path='/'] #content-area):has([data-product-guide-index]) > div:first-child {
+:is(#content-area[data-current-path="/"], [data-current-path="/"] #content-area):has(
+    [data-product-guide-index]
+  )
+  > div:first-child {
   background: transparent !important;
   padding-right: 0 !important;
   padding-bottom: 0 !important;
@@ -101,14 +113,25 @@ body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] svg {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
-  min-height: 260px;
-  background: url('/images/sample-feature-light.png') center / cover no-repeat !important;
+  min-height: 220px;
+  background: linear-gradient(
+      135deg,
+      rgb(124 84 255 / 92%) 0%,
+      rgb(91 63 214 / 88%) 100%
+    ),
+    url("/images/sample-feature-light.png") center / cover no-repeat !important;
   border: none !important;
   box-shadow: none !important;
   color: white !important;
-  .dark & {
-    background-image: url('/images/sample-feature-dark.png') !important;
-  }
+}
+
+.dark .product-guide-feature-card {
+  background: linear-gradient(
+      135deg,
+      rgb(124 84 255 / 88%) 0%,
+      rgb(45 35 90 / 92%) 100%
+    ),
+    url("/images/sample-feature-dark.png") center / cover no-repeat !important;
 }
 
 .product-guide-feature-card > div {
@@ -122,7 +145,7 @@ body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] svg {
   color: white !important;
 }
 
-.product-guide-feature-card :is(svg, [class*='icon']) {
+.product-guide-feature-card :is(svg, [class*="icon"]) {
   background-color: white !important;
   width: 2em !important;
   height: 2em !important;
@@ -137,13 +160,5 @@ body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] svg {
 .product-guide-feature-card :is(h2, h3, p, span, svg).product-guide-feature-card-description {
   font-size: 1.05em;
   font-weight: 400;
-  color: rgb(var(--gray-50) / 62.5%) !important;
-  .dark & {
-    color: rgb(var(--gray-50) / 50%) !important;
-  }
-}
-
-img.nav-logo {
-  max-width: 220px;
-  height: auto;
+  color: rgb(255 255 255 / 72%) !important;
 }

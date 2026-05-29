@@ -1,0 +1,114 @@
+---
+title: Prompting best practices
+description: Write effective prompts to get better results from Natively's AI agents.
+---
+
+The quality of your prompts directly affects the quality of your app. These practices help you build faster and avoid common pitfalls.
+
+## Start with a clear goal
+
+Before prompting, know what you want:
+
+- **What** — The type of app (dashboard, landing page, tool)
+- **Who** — Who will use it
+- **Key features** — The 2–3 things it must do in v1
+
+<Note>
+  New projects start with the **Product Architect** agent, which helps you define scope before code is written. Use it to plan, then switch to **Builder** to implement.
+</Note>
+
+## Be specific
+
+Vague prompts produce vague results. Compare:
+
+| Weak | Strong |
+|------|--------|
+| "Make a dashboard" | "Build a sales dashboard with a revenue chart, a table of recent orders, and filters for date range and region" |
+| "Fix the styling" | "Make the header sticky, increase button padding to 12px, and use a dark background (#111) with white text" |
+| "Add auth" | "Add email/password login with a sign-in page, sign-up page, and redirect to /dashboard after login" |
+
+## Build incrementally
+
+Don't try to build everything in one prompt. Break work into steps:
+
+<Steps>
+  <Step title="Layout and navigation">
+    "Create the main layout with a sidebar, header, and content area. Add navigation links for Dashboard, Settings, and Profile."
+  </Step>
+  <Step title="Core feature">
+    "Add a task list to the Dashboard page. Each task has a title, status badge, and a checkbox to mark complete."
+  </Step>
+  <Step title="Polish">
+    "Add empty states when there are no tasks. Style the status badges: green for done, yellow for in progress, gray for todo."
+  </Step>
+</Steps>
+
+<Warning>
+  Large, multi-feature prompts often produce incomplete or broken results. Smaller, focused prompts are more reliable.
+</Warning>
+
+## Use the right agent
+
+Natively offers specialized agents for different tasks:
+
+| Agent | Best for |
+|-------|----------|
+| **Product Architect** | Planning, PRDs, architecture decisions, scoping features |
+| **Builder** | Writing code, implementing features, fixing bugs |
+| **Task Planner** | Breaking features into tasks and managing a task board |
+| **Feedback** | Reporting bugs, requesting features, asking product questions |
+
+Switch agents from the agent picker in the chat panel. If you're unsure where to start, Product Architect helps you plan; Builder implements.
+
+## Reference what exists
+
+When iterating on an existing project, point to specific parts:
+
+- "Update the **Settings page** to add a dark mode toggle"
+- "Change the **primary button color** on the landing page to purple"
+- "Add a **new route** at `/analytics` with a bar chart of monthly revenue"
+
+The AI has context about your project's current code and structure.
+
+## Use real content
+
+Replace placeholder text with realistic content early:
+
+- Use actual product names, not "Lorem ipsum"
+- Provide sample data that matches your use case
+- Include real error messages and edge cases you expect
+
+This helps the AI make better structural decisions.
+
+## Enhance your prompt
+
+Use the **Enhance prompt** button in the chat composer to expand a short idea into a detailed prompt before sending. This is especially useful when you know what you want but aren't sure how to phrase it.
+
+## When something goes wrong
+
+If the AI produces unexpected results:
+
+1. **Be specific about the problem** — "The sidebar overlaps the content on mobile" not "it looks broken"
+2. **Ask for one fix at a time** — Don't combine unrelated changes
+3. **Revert if needed** — Use the Versions panel to roll back to a working snapshot (paid plans)
+4. **Rephrase** — Sometimes rewording the request produces a better result
+
+## Model selection
+
+Different models have different strengths and credit costs:
+
+- **Standard models** — Fast, cost-effective, good for most tasks
+- **Premium models** — Better reasoning for complex features (Pro plan and above)
+
+Choose models from the model picker in the chat panel. Premium models consume more credits per message.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Getting started" icon="rocket" href="/introduction/getting-started">
+    Apply these tips to your first project.
+  </Card>
+  <Card title="Plans & credits" icon="coins" href="/introduction/plans-and-credits">
+    Understand model access and credit costs.
+  </Card>
+</CardGroup>
