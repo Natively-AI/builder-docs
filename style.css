@@ -25,9 +25,10 @@ h3,
 }
 
 img.nav-logo {
-  max-width: 176px;
+  max-width: 180px;
   height: 32px;
   width: auto;
+  object-fit: contain;
 }
 
 #sidebar .nav-dropdown-trigger {
@@ -148,30 +149,27 @@ body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] svg {
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-end !important;
-  min-height: 240px;
-  padding-bottom: 0.25rem !important;
-  background-color: #09090b !important;
+  min-height: 220px;
+  padding: 1.5rem !important;
+  overflow: hidden !important;
+  background-color: #000 !important;
   background-image:
-    radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.07) 1px, transparent 0),
-    radial-gradient(ellipse 70% 55% at 85% 110%, rgb(41 205 131 / 0.28) 0%, transparent 60%),
-    radial-gradient(ellipse 55% 45% at 10% -5%, rgb(67 102 255 / 0.35) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 35% at 60% 20%, rgb(124 84 255 / 0.18) 0%, transparent 50%),
-    linear-gradient(180deg, #0c0c0f 0%, #09090b 100%) !important;
+    url("/images/hero-glow.svg"),
+    radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.035) 1px, transparent 0) !important;
   background-size:
-    22px 22px,
-    auto,
-    auto,
-    auto,
-    auto !important;
+    cover,
+    24px 24px !important;
+  background-position:
+    center,
+    0 0 !important;
+  background-repeat: no-repeat, repeat !important;
   border: 1px solid rgb(255 255 255 / 0.08) !important;
-  box-shadow:
-    0 0 0 1px rgb(255 255 255 / 0.03) inset,
-    0 24px 48px rgb(0 0 0 / 0.35) !important;
+  box-shadow: 0 20px 40px rgb(0 0 0 / 0.35) !important;
   color: white !important;
 }
 
 .dark .product-guide-feature-card {
-  background-color: #09090b !important;
+  background-color: #000 !important;
 }
 
 .product-guide-feature-card > div {
@@ -179,6 +177,41 @@ body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] svg {
   flex: 1;
   flex-direction: column !important;
   justify-content: flex-end !important;
+  width: 100% !important;
+}
+
+.product-guide-feature-card-inner {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 2rem !important;
+  width: 100% !important;
+}
+
+.product-guide-feature-card-copy {
+  flex: 1;
+  min-width: 0;
+  max-width: 36rem;
+}
+
+.product-guide-feature-card-mark {
+  width: 7rem;
+  height: 7rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  opacity: 0.95;
+  filter: drop-shadow(0 8px 24px rgb(0 0 0 / 0.45));
+}
+
+@media (max-width: 640px) {
+  .product-guide-feature-card-mark {
+    display: none;
+  }
+}
+
+/* Hide Mintlify default card chrome on the hero */
+.product-guide-feature-card :is(h2, h3, p, svg):not(.product-guide-feature-card-title):not(.product-guide-feature-card-eyebrow):not(.product-guide-feature-card-description) {
+  display: none !important;
 }
 
 .product-guide-feature-card :is(h2, h3, p, span, svg) {
@@ -186,10 +219,7 @@ body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] svg {
 }
 
 .product-guide-feature-card :is(svg, [class*="icon"]) {
-  background-color: rgb(255 255 255 / 0.92) !important;
-  width: 2em !important;
-  height: 2em !important;
-  margin-top: 2px;
+  display: none !important;
 }
 
 .product-guide-feature-card-eyebrow {

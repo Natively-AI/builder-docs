@@ -28,11 +28,11 @@ Replace logos by dropping files into `/logo/`:
 
 | File | Used for |
 |------|----------|
-| `logo/light.svg` | Navbar on light mode (dark text/icon) |
-| `logo/dark.svg` | Navbar on dark mode (light text/icon) |
-| `logo/icon.svg` | App icon only (optional favicon source) |
+| `logo/light.png` | Navbar on light mode (dark wordmark, transparent BG) |
+| `logo/dark.png` | Navbar on dark mode (light wordmark, transparent BG) |
+| `logo/icon.png` | Hero card + favicon |
 
-Mintlify reads paths from `docs.json` → `logo.light` and `logo.dark`. SVG or PNG both work. Recommended width: ~176px horizontal wordmark.
+See `logo/README.md` for export specs. **PNG is supported** — replace files in `/logo/` and push; no Mintlify dashboard upload needed.
 
 ## Style preferences
 

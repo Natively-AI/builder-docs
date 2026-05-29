@@ -8,17 +8,23 @@ mode: frame
 
 <Columns cols={2}>
   <Card
-    title="Getting started"
-    icon="rocket"
     href="/introduction/getting-started"
     className="product-guide-feature-card"
-    size={64}
   >
-    <span className="product-guide-feature-card-eyebrow">Native.Builder</span>
-    <span className="product-guide-feature-card-title">Your software factory</span>
-    <span className="product-guide-feature-card-description">
-      Describe what you need. Specialized agents plan, build, and ship — without hiring a dev team.
-    </span>
+    <div className="product-guide-feature-card-inner">
+      <div className="product-guide-feature-card-copy">
+        <span className="product-guide-feature-card-eyebrow">Native.Builder</span>
+        <span className="product-guide-feature-card-title">Your software factory</span>
+        <span className="product-guide-feature-card-description">
+          Describe what you need. Specialized agents plan, build, and ship — without hiring a dev team.
+        </span>
+      </div>
+      <img
+        src="/logo/icon.png"
+        alt=""
+        className="product-guide-feature-card-mark"
+      />
+    </div>
   </Card>
 
   <Card title="Plans & credits" icon="coins" href="/introduction/plans-and-credits">
