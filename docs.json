@@ -69,13 +69,13 @@
     "links": [
       {
         "label": "Pricing",
-        "href": "https://nativelyai.com/pricing"
+        "href": "/introduction/plans-and-credits"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Open app",
-      "href": "https://nativelyai.com"
+      "href": "https://beta.nativelyai.com"
     }
   },
   "footer": {
