@@ -243,9 +243,10 @@ body:has([data-product-guide-index]) #sidebar a.nav-anchor[href="/"] svg {
 }
 
 .product-guide-feature-card-title-gradient {
-  background: linear-gradient(90deg, #29cd83 0%, #4366ff 55%, #7c54ff 100%);
-  background-clip: text;
+  background-image: linear-gradient(90deg, #29cd83 0%, #4366ff 100%);
   -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent !important;
 }
 
