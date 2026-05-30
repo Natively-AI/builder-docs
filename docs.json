@@ -4,8 +4,8 @@
   "name": "Native.Builder Docs",
   "description": "Native.Builder is a software factory — specialized AI agents that build and ship products so you save time and money.",
   "colors": {
-    "primary": "#7C54FF",
-    "light": "#4366FF",
+    "primary": "#4366FF",
+    "light": "#5B82FF",
     "dark": "#111827"
   },
   "favicon": "/logo/icon.png",
