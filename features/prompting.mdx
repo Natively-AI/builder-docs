@@ -84,6 +84,39 @@ This helps the AI make better structural decisions.
 
 Use the **Enhance prompt** button in the chat composer to expand a short idea into a detailed prompt before sending. This is especially useful when you know what you want but aren't sure how to phrase it.
 
+## Design system
+
+At the start of a new project, the Builder agent generates a tailored **design system** — a palette, typography pairing, layout pattern, and a list of anti-patterns picked to match what you're building (e.g. a fintech dashboard, a beauty spa booking site, a browser game).
+
+It's saved as `design-system/MASTER.md` in your project's **Documents** tab and re-applied on every turn, so page 5 stays visually consistent with page 1.
+
+### Steer it with style preferences
+
+Mention your look-and-feel preferences in your first brief and the agent will fold them into the generated system instead of overriding you. Things worth saying up front:
+
+- **Mode** — "dark mode", "light only"
+- **Brand colors** — "primary should be teal (#0EA5A4)"
+- **Mood** — "minimal and editorial", "playful and rounded", "serious and corporate"
+- **Typography** — "use a serif for headings"
+
+Example brief:
+
+```text
+Build a booking site for an independent yoga studio. Minimal and calm,
+warm off-white background, sage green as the primary color, serif headings.
+Three pages: home, classes, and a booking form.
+```
+
+The agent may also ask a clarifying question before generating the system — answer it before any pages are built so the palette and typography reflect your taste from page one.
+
+### Edit it to influence future generations
+
+Open `design-system/MASTER.md` from the **Documents** tab to inspect the palette, fonts, layout pattern, and anti-patterns the agent is following. Edits you make are picked up on subsequent turns — change a color, swap a font, or add a rule like "no gradient backgrounds" and the agent will respect it on the next page it builds.
+
+<Tip>
+  To restyle an existing project, edit `design-system/MASTER.md` directly (or describe the change in chat) rather than asking for a brand-new design system — that keeps changes consistent across every page.
+</Tip>
+
 ## When something goes wrong
 
 If the AI produces unexpected results:
