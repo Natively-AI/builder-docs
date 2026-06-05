@@ -1,0 +1,61 @@
+---
+title: "BYOK providers"
+description: "Bring your own API key to unlock additional model providers in the model picker."
+---
+
+Bring your own key (BYOK) lets you use models from third‑party AI providers with your own API key, instead of (or in addition to) the platform‑funded models included with your plan. Once connected, BYOK models appear in the chat model picker and billing for those completions goes to the provider, not your Native.Builder credits.
+
+Use BYOK when you want to:
+
+- Use a specific model that isn't in the default catalog
+- Run higher volumes without consuming workspace credits
+- Take advantage of provider‑side pricing, rate limits, or compliance setup you already have
+
+## Supported providers
+
+| Provider | What you get |
+|----------|--------------|
+| **OpenRouter** | Access to OpenRouter's full model catalog through one key |
+| **AI/ML API** | Models served by [AI/ML API](https://aimlapi.com) |
+| **Fireworks AI** | A curated set of Fireworks‑hosted open models, including Llama 3.1 405B, Llama 3.3 70B, Kimi 2.6, DeepSeek R1, DeepSeek V3, and Qwen3 235B |
+
+Keys are scoped to the workspace that connects them. Every member of that workspace can use the connected provider's models from the model picker.
+
+## Connect a provider
+
+<Steps>
+  <Step title="Open Settings → Integrations">
+    From the sidebar, open **Settings**, then choose **Integrations**.
+  </Step>
+  <Step title="Pick the provider">
+    Select **OpenRouter**, **AI/ML API**, or **Fireworks AI**.
+  </Step>
+  <Step title="Paste your API key">
+    Generate a key in the provider's dashboard, paste it into the integration panel, and save. Builder verifies the key before storing it.
+  </Step>
+  <Step title="Pick a model in chat">
+    Open the model picker in the chat panel. A new section for the connected provider appears with its available models.
+  </Step>
+</Steps>
+
+<Note>
+  You can disconnect a provider at any time from the same Integrations screen. Disconnecting removes its models from the picker for everyone in the workspace.
+</Note>
+
+## How BYOK models behave
+
+- **Billing** — Completions go directly to the provider on your key. They don't deduct Native.Builder credits.
+- **Availability** — If the key is invalid, revoked, or out of quota, BYOK models are hidden or fail at send time with the provider's error.
+- **Switching models** — You can switch between platform‑funded and BYOK models mid‑conversation; each message uses whichever model is currently selected.
+- **Plan gating** — BYOK is available on every plan. The platform's premium‑model gating only applies to platform‑funded models.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Prompting best practices" icon="sparkles" href="/features/prompting">
+    Get better results from whichever model you pick.
+  </Card>
+  <Card title="Plans & credits" icon="coins" href="/introduction/plans-and-credits">
+    See which models are included on each plan.
+  </Card>
+</CardGroup>
