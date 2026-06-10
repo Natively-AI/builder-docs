@@ -56,7 +56,8 @@
           "features/publish",
           "features/custom-domain",
           "features/workspaces",
-          "features/prompting"
+          "features/prompting",
+          "features/byok-providers"
         ]
       }
     ]
