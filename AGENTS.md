@@ -51,6 +51,34 @@ See `logo/README.md` for export specs. **PNG is supported** — replace files in
 - Skip troubleshooting pages for now — route users to **Support** instead
 - Keep plan details aligned with the in-app pricing page
 
+## Public changelog
+
+`changelog.mdx` is the public product changelog. Keep the existing structure:
+
+```mdx
+## vX.Y.Z — Month YYYY
+
+### New
+- **Feature name** — Short user-facing benefit
+
+### Improved
+- **Area** — What got better for the user
+
+### Fixed
+- **Area** — What works again / correctly now
+```
+
+Rules for changelog entries (humans and automations):
+
+- Only ship changes that affect how customers build, collaborate, or ship in **Native.Builder**
+- Prefer source text from `Natively-AI/conductor-2.0` files matching `changelog/v*-user.md` — those are the approved public summaries
+- Ignore engineering-only notes in `changelog/vX.Y.Z.md` (no `-user` suffix)
+- Match terminology in this file; never call the product "Natively"
+- Map section names: What's new → New, Improvements → Improved, Fixes → Fixed, Removed → Removed
+- Insert newer versions above older ones, directly under the intro paragraph
+- Do not change older published entries unless correcting a factual error
+- Open a PR for review; do not push straight to `main` unless explicitly configured to automerge
+
 ## Editing workflow
 
 1. Edit the relevant `.mdx` file

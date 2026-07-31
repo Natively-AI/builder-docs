@@ -1,9 +1,183 @@
 ---
-title: Changelog
-description: What's new in Native.Builder — features, improvements, and fixes you care about.
+title: "Native.Builder changelog"
+sidebarTitle: "Changelog"
+description: "Product updates for Native.Builder — new features, improvements, and fixes for building, collaborating, and shipping apps."
+keywords: ["changelog", "release notes", "native.builder updates", "product updates"]
+"og:title": "Native.Builder changelog"
+"og:description": "Product updates for Native.Builder — new features, improvements, and fixes for building, collaborating, and shipping apps."
 ---
 
 Product updates for **Native.Builder**. Only changes that affect how you build, collaborate, and ship are listed here.
+
+---
+
+## v1.5.0 — July 2026
+
+### New
+
+- **Project sharing** — Share a project with people outside the usual workspace flow and find shared work under Shared with me
+- **Credit top-ups** — Buy additional credits from an in-app credit store when you need more runway mid-cycle
+- **Smarter connected files** — Semantic search over Google Drive / Dropbox sources so Builder finds the right docs in connected folders
+- **Project environment variables** — Manage env vars for a project from app settings (including Supabase-related sync helpers)
+- **QA agent** — A QA agent that can verify builds and run Playwright smoke checks before you ship
+- **Onboarding templates** — Start from a template and a prefilled prompt during onboarding
+- **Payment invoices** — Open invoices from Payment History in billing settings
+- **More AI/ML API models** — Expanded AI/ML API roster in the model picker, with clearer BYOK labeling
+
+### Improved
+
+- **Upgrade when out of credits** — Clearer upgrade prompt from the projects list when you don’t have enough credits to continue
+- **Docs-aware planning** — Agents consult official Builder docs before planning so guidance matches the product
+- **Supabase reliability** — Self-healing when a Supabase connection needs to refresh account/project info
+- **Sandbox rename UI** — Clearer handling when a sandbox is renamed
+- **File chips in chat** — Larger click target to expand file content from an attachment name
+- **Settings layout** — Settings modal width stays consistent across tabs
+
+### Fixed
+
+- **Free plan model gating** — Free-plan ledger credits no longer unlock paid models
+- **AI/ML API BYOK** — Connected AI/ML API models remain selectable in the picker
+- **Chat scroll** — Chat forces scroll to the latest message when you send or answer a question
+- **Project switcher** — Rename field no longer overlaps the toolbar CTA
+- **Publish credit styling** — Credit/publish UI styling fixes on constrained layouts
+
+---
+
+## v1.4.0 — July 2026
+
+### New
+
+- **Edit and resend messages** — Copy, edit, or resend your own chat messages without starting over
+- **Clearer agent questions** — Review and answer agent questions with a cleaner multiple-choice flow
+- **Project settings in the header** — Open project settings from a header dropdown while you work
+- **Tips into the composer** — Suggested tips insert into the prompt input so you can edit before sending
+- **Collapsible agent thinking** — Long agent chain-of-thought is summarized into one collapsible turn
+- **Focused new-project chat** — New projects open in a fullscreen chat focus until the first PRD or Builder unlock
+- **Bulk delete projects** — Remove multiple projects at once from your project list
+- **Per-project Supabase** — Connect Supabase at the project level so each app can use its own backend
+
+### Improved
+
+- **Free plan projects** — Free workspaces can have up to **2** projects (previously 3)
+- **Chat readability** — Wider assistant bubbles and clearer empty-state copy
+- **Safer preview links** — The raw sandbox preview URL is hidden from the UI
+- **My Projects prompt** — Start-building CTA and animated placeholder match the homepage experience
+- **Agent picker** — Hover an agent to see a short description before switching
+
+### Fixed
+
+- **AI/ML API BYOK** — Connected AI/ML API models show and select correctly in the picker again
+- **External images** — PNG sources from connected external files render reliably in preview
+- **Fresh-project publish** — Publishing works on newly created projects
+- **Incognito preview** — Live preview loads correctly in private browsing windows
+- **Chat polish** — Toolbar overflow, tip button contrast, and related mobile/chat layout issues
+
+---
+
+## v1.3.0 — July 2026
+
+### New
+
+- **Command execution in sandbox** — Builder can run shell commands in the sandbox while building — installs, build steps, and scripts without leaving chat
+- **Library documentation search** — Builder looks up third-party package docs in real time for more accurate APIs and patterns
+- **Smarter preview controls** — Refresh the live preview without restarting the whole sandbox
+- **Redesigned onboarding** — Cleaner first-run flow, contextual suggested prompts, and upgrade nudges when a workspace is ready
+
+### Improved
+
+- **Free-tier credits** — New Free workspaces get a larger starter credit allowance to explore before upgrading
+- **Credit billing accuracy** — Credits settle at finer precision so short completions are less likely to be overcharged
+- **Upload limits** — Clearer, consistent file size limits across code and docs tabs
+
+### Fixed
+
+- **Billing on Free** — Free-plan credit debits use the correct default rate
+- **Long model responses** — Caps avoid unexpectedly large credit charges on very long completions
+- **Sandbox stability** — Scrolling or clicking the live preview no longer stops the sandbox mid-build
+- **Fireworks BYOK** — Fireworks completions work reliably when using your own key
+- **GitHub Sync** — Sync opens Integrations settings when GitHub is not connected
+- **Suggest actions** — Suggestion prompts keep conversation context when you cycle options
+- **File overwrite safety** — Replacing a file with a different extension asks for confirmation first
+- **Quieter errors** — Raw tool-call error payloads are no longer shown in chat
+- **Beta indicator** — Outdated “We are in beta” label removed
+
+---
+
+## v1.2.0 — June 2026
+
+### New
+
+- **Smarter long conversations** — Builder recalls the most relevant earlier messages and decisions, not just the latest turns
+- **Cross-session memory** — Important project facts carry over when you return to a project
+- **Any-stack app runtime** — Build beyond Vite/React presets; all project files are editable, including frontend env configs. Existing projects migrate automatically
+- **Data connectors** — Connect Google Drive and Dropbox in workspace settings and use those files as data sources while you build
+- **Faster live preview** — Preview loads sooner with less white flash while the sandbox starts
+- **Image paste in chat** — Paste PNG or JPEG into the composer with ⌘V / Ctrl+V
+- **Multi-file upload** — Attach several files to a message at once
+- **Multiple-choice agent questions** — Tap to answer when the agent needs a decision
+- **Browser completion notifications** — Optional notification when a long build or chat finishes in another tab
+- **Richer generated apps** — Stronger guidance for accessibility, navigation, performance, data viz, motion, and polish
+- **Smarter agent default** — Reopening an in-progress project starts on the Builder agent; new projects still begin with Product Architect
+
+### Improved
+
+- **Billing emails** — Receipt, payment-failed, and cancellation emails use branded templates
+- **Docs-aware agents** — Builder and Product Architect can consult official docs when explaining platform capabilities
+- **GitHub Sync** — Clearer message and Integrations deep-link when GitHub is not connected
+- **Model availability** — Natively Max in the picker; clearer model limits for supported models
+- **Attachment privacy** — Uploaded filenames are hidden on attachment chips
+- **Upload errors** — Toasts show the specific failure reason
+- **Dismissible toasts** — Every notification toast has a close control
+
+### Fixed
+
+- **Failed message retry** — Prompt text is restored if a send fails
+- **Auto-fix and Ask AI** — Preview error detection and Ask AI no longer interrupt an in-progress run
+- **Prompt mentions** — Mentions in the prompt input work again
+- **Multi-conversation projects** — Auto-fix and related messages land in the conversation you have open
+- **Docs panel** — PDF and video open correctly in the project docs tab
+- **Design system editing** — Builder no longer loops when updating the design system document
+- **File handling** — More reliable folders, binaries, and moves between docs/code
+- **Mobile chat** — Layout fixes for chat/preview split and related mobile UI
+- **Custom domains** — Primary domain and `www` resolution behave correctly
+- **Plan downgrade** — Cancelling or returning to Free completes and stops billing as expected
+- **Published site updates** — You can update a published site even if another project is at its plan limit
+
+### Removed
+
+- **Claude Fable 5** — Model and promotional banner removed from the picker
+
+---
+
+## v1.1.1 — June 2026
+
+### Improved
+
+- **GitHub connection** — Connecting or reconnecting GitHub reliably reaches repository selection, including after a previous authorization
+
+---
+
+## v1.1.0 — June 2026
+
+### New
+
+- **Design system generation** — Builder creates a consistent design system (colors, typography, layout patterns) so new pages stay cohesive
+- **Fireworks AI BYOK** — Connect a Fireworks AI key in workspace Integrations
+- **In-app feedback** — Use the Feedback agent in chat to report bugs or share suggestions
+- **Docs in the sidebar** — Open official Native.Builder docs from **Resources → Docs**
+
+### Improved
+
+- **Team collaboration** — Workspace members can chat on projects connected to Supabase or GitHub, not only owners and admins
+- **Ask-question options** — Long multiple-choice answers wrap instead of clipping
+- **Social icons in generated apps** — Proper brand icons instead of broken logo imports
+
+### Fixed
+
+- **Google sign-in** — Discord community banner appears after Google login
+- **GitHub sync** — Clear reconnect path when a GitHub token expires
+- **Chat stability** — Fixed crashes when tool calls return empty arguments
+- **Chat noise** — Removed the noisy writing-tips message; simplified the switch-agent card
 
 ---
 

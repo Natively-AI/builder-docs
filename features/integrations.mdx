@@ -1,0 +1,79 @@
+---
+title: "Native.Builder integrations"
+sidebarTitle: "Integrations"
+description: "Connect GitHub, Supabase, BYOK model providers, Google Drive, and Dropbox from Settings → Integrations in Native.Builder."
+keywords: ["integrations", "github", "supabase", "byok", "google drive", "dropbox", "settings"]
+"og:title": "Native.Builder integrations"
+"og:description": "Connect GitHub, Supabase, BYOK model providers, Google Drive, and Dropbox from Settings → Integrations in Native.Builder."
+---
+
+Integrations connect **Native.Builder** to the tools your team already uses. Most connections are set up once per **workspace** under **Settings → Integrations**, then available to projects in that workspace.
+
+## Open Integrations
+
+1. Open your workspace in the app
+2. Go to **Settings → Integrations**
+3. Choose a provider card and click **Connect**
+
+If a connection expires or fails, the card shows **Reconnect** so you can restore access without hunting through other screens.
+
+## What’s available
+
+| Integration | What it does |
+| --- | --- |
+| **GitHub** | Link the workspace to GitHub and [sync project code](/features/github-sync) to a repository |
+| **Supabase** | [Database, auth, storage, and functions](/features/supabase) — connect the workspace, then link each app to a Supabase project |
+| **OpenRouter** | [Bring your own key](/features/byok-providers) for OpenRouter models |
+| **AI/ML API** | Bring your own AI/ML API key for extra models in the picker |
+| **Fireworks AI** | Bring your own Fireworks key for open models |
+| **Featherless AI** | Bring your own [Featherless](https://featherless.ai) key for open models — see [BYOK providers](/features/byok-providers) |
+| **Google Drive** | [Data connector](/features/data-connectors) — use Drive folders as document sources for the AI |
+| **Dropbox** | [Data connector](/features/data-connectors) — use Dropbox folders as document sources for the AI |
+
+<Note>
+  Google Drive and Dropbox may appear only when data connectors are enabled for your workspace. BYOK providers unlock models in the chat model picker and do not consume Native.Builder credits for those completions — BYOK itself requires a **paid plan** or the **Lablab Builder** plan (see [BYOK providers](/features/byok-providers)).
+</Note>
+
+## Connect a provider
+
+<Steps>
+  <Step title="Open Settings → Integrations">
+    From the sidebar or project chrome, open **Settings**, then **Integrations**.
+  </Step>
+  <Step title="Select a provider">
+    Click the card for GitHub, Supabase, a BYOK provider, or a data connector.
+  </Step>
+  <Step title="Authorize or paste a key">
+    OAuth providers (GitHub, Supabase, Drive, Dropbox) open a consent flow. BYOK providers ask you to paste an API key; Builder verifies it before saving.
+  </Step>
+  <Step title="Use it in a project">
+    For GitHub, use **Sync** on the project. For Supabase, link the project to a Supabase project when prompted. For BYOK, pick the provider’s models in chat. For Drive/Dropbox, reference connected folders while you build.
+  </Step>
+</Steps>
+
+## Disconnect or reconnect
+
+- **Disconnect** removes the workspace connection. Linked folders or sync setup for that provider stop working until you connect again.
+- **Reconnect** appears when the connection is expired or in an error state — use it to restore access.
+
+Members can use chat on projects that already have GitHub or Supabase linked; connecting or disconnecting integrations is typically done by workspace admins from Settings.
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="Supabase" icon="database" href="/features/supabase">
+    Connect your account, link a project per app, and build with the agent.
+  </Card>
+  <Card title="GitHub Sync" icon="github" href="/features/github-sync">
+    Connect GitHub and use the Sync button on desktop and mobile.
+  </Card>
+  <Card title="BYOK providers" icon="key" href="/features/byok-providers">
+    OpenRouter, AI/ML API, and Fireworks with your own keys.
+  </Card>
+  <Card title="Data connectors" icon="hard-drive" href="/features/data-connectors">
+    Google Drive and Dropbox as AI document sources.
+  </Card>
+  <Card title="Workspaces" icon="building-2" href="/features/workspaces">
+    Members, billing, and workspace-level settings.
+  </Card>
+</CardGroup>

@@ -1,0 +1,83 @@
+---
+title: "Upload files and download source code"
+sidebarTitle: "Files and download"
+description: "Upload files and folders in Code or Docs, drag and drop into the explorer, and download your whole Native.Builder project as a zip."
+keywords: ["download source code", "upload files", "file explorer", "zip", "docs tab"]
+"og:title": "Upload files and download source code"
+"og:description": "Upload files and folders in Code or Docs, drag and drop into the explorer, and download your whole Native.Builder project as a zip."
+---
+
+Every project keeps files in two places you can browse in the preview side of the project page:
+
+| Tab | What’s in it |
+| --- | --- |
+| **Code** | App source — components, configs, assets the sandbox runs |
+| **Docs** | Project documents — specs, notes, PDFs, and other reference files |
+
+You can upload into either tab, and you can download the **entire Code tree** as a zip from the bottom of the project page.
+
+## Download your whole source code
+
+On an open project, look at the **bottom-right** of the preview / project chrome (the bottom bar under the live preview).
+
+1. Open your project
+2. Find the **Download** control in the bottom bar (download icon; tooltip: **Download source code**)
+3. Click it
+
+Builder packages the current **Code** volume into a zip and saves it locally as:
+
+`your-project-name-source-code.zip`
+
+<Note>
+  The zip reflects the code for the version you’re currently previewing. It does **not** include the Docs tab. For a remote copy of the repo, use [GitHub Sync](/features/github-sync) instead.
+</Note>
+
+On mobile, the same action uses a file-download icon in that bottom bar.
+
+## Upload files
+
+Open the **Code** or **Docs** file tree on the project page (Files / Documents sidebar next to the editor).
+
+### Upload a single file
+
+1. In the file tree header, click the **Upload** icon (tooltip: **Upload file** on Code, **Upload document** on Docs)
+2. Pick a file from your computer
+3. In the dialog, choose a **destination folder** (leave blank for the volume root) and optionally rename the file
+4. Click **Upload**
+
+If the name already exists with a different extension, Builder asks you to confirm before overwriting.
+
+### Upload a folder or many files
+
+1. Click the **Upload folder** control in the file tree header, **or** drag files/folders onto the file explorer
+2. Confirm the **destination folder** — folder structure is preserved
+3. Click **Upload**
+
+Limits and filters:
+
+- Total selection size up to about **500 MB**
+- Common junk is skipped automatically (for example `.DS_Store`, `Thumbs.db`, `node_modules`, `.git`)
+
+Drag-and-drop works the same way: drop onto the explorer, then confirm destination.
+
+### Create empty files or folders
+
+From the same file tree you can create a new file/document or folder, including nested paths like `design/mockups`.
+
+## Tips
+
+- Select a folder in the tree first if you want uploads to default into that folder
+- Use **Docs** for briefs and reference material; use **Code** for anything the app should run
+- For cloud files you don’t want to re-upload, connect [Google Drive or Dropbox](/features/data-connectors)
+- To attach a few files to a chat message instead of the project tree, use the composer attach / paste flow described in [Prompting](/features/prompting)
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="GitHub Sync" icon="github" href="/features/github-sync">
+    Push the project to a GitHub repository.
+  </Card>
+  <Card title="Data connectors" icon="hard-drive" href="/features/data-connectors">
+    Use Drive or Dropbox folders as AI sources.
+  </Card>
+</CardGroup>

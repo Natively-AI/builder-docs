@@ -1,6 +1,10 @@
 ---
-title: "BYOK providers"
-description: "Connect your own OpenRouter, AI/ML API, or Fireworks AI key to unlock extra chat models in Native.Builder without using workspace credits."
+title: "BYOK providers in Native.Builder"
+sidebarTitle: "BYOK providers"
+description: "Bring your own OpenRouter, AI/ML API, Fireworks, or Featherless key on paid and Lablab Builder plans — models without using workspace credits."
+keywords: ["byok", "bring your own key", "openrouter", "fireworks", "featherless", "aiml api"]
+"og:title": "BYOK providers in Native.Builder"
+"og:description": "Bring your own OpenRouter, AI/ML API, Fireworks, or Featherless key on paid and Lablab Builder plans — models without using workspace credits."
 ---
 
 Bring your own key (BYOK) lets you use models from third‑party AI providers with your own API key, instead of (or in addition to) the platform‑funded models included with your plan. Once connected, BYOK models appear in the chat model picker and billing for those completions goes to the provider, not your Native.Builder credits.
@@ -11,6 +15,11 @@ Use BYOK when you want to:
 - Run higher volumes without consuming workspace credits
 - Take advantage of provider‑side pricing, rate limits, or compliance setup you already have
 
+
+<Note>
+  BYOK requires a **paid plan** or the **Lablab Builder** plan. Free workspaces need to upgrade before they can connect a provider key.
+</Note>
+
 ## Supported providers
 
 | Provider | What you get |
@@ -18,8 +27,11 @@ Use BYOK when you want to:
 | **OpenRouter** | Access to OpenRouter's full model catalog through one key |
 | **AI/ML API** | Models served by [AI/ML API](https://aimlapi.com) |
 | **Fireworks AI** | A curated set of Fireworks‑hosted open models, including Llama 3.1 405B, Llama 3.3 70B, Kimi 2.6, DeepSeek R1, DeepSeek V3, and Qwen3 235B |
+| **Featherless AI** | Open models via [Featherless](https://featherless.ai), including Laguna S 2.1, GLM-5.2, Kimi K2.7 Code, Qwen3.6 35B, DeepSeek V4 Pro, and Gemma 4 31B |
 
-Keys are scoped to the workspace that connects them. Every member of that workspace can use the connected provider's models from the model picker.
+Available models for each BYOK provider can expand over time in the picker. Keys are scoped to the workspace that connects them. Every member of that workspace can use the connected provider's models from the model picker.
+
+BYOK lives under **Settings → Integrations** alongside GitHub, Supabase, and [data connectors](/features/data-connectors). See the full [Integrations](/features/integrations) overview.
 
 ## Connect a provider
 
@@ -28,7 +40,7 @@ Keys are scoped to the workspace that connects them. Every member of that worksp
     From the sidebar, open **Settings**, then choose **Integrations**.
   </Step>
   <Step title="Pick the provider">
-    Select **OpenRouter**, **AI/ML API**, or **Fireworks AI**.
+    Select **OpenRouter**, **AI/ML API**, **Fireworks AI**, or **Featherless AI**.
   </Step>
   <Step title="Paste your API key">
     Generate a key in the provider's dashboard, paste it into the integration panel, and save. Builder verifies the key before storing it.
@@ -47,7 +59,7 @@ Keys are scoped to the workspace that connects them. Every member of that worksp
 - **Billing** — Completions go directly to the provider on your key. They don't deduct Native.Builder credits.
 - **Availability** — If the key is invalid, revoked, or out of quota, BYOK models are hidden or fail at send time with the provider's error.
 - **Switching models** — You can switch between platform‑funded and BYOK models mid‑conversation; each message uses whichever model is currently selected.
-- **Plan gating** — BYOK is available on every plan. The platform's premium‑model gating only applies to platform‑funded models.
+- **Plan gating** — BYOK is available on **paid plans** and the **Lablab Builder** plan. It is not available on Free. Premium‑model gating for platform‑funded models is separate and still follows your plan.
 
 ## Next steps
 
