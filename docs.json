@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
   "name": "Native.Builder Docs",
-  "description": "Native.Builder is a software factory \u2014 specialized AI agents that build and ship products so you save time and money.",
+  "description": "Official Native.Builder documentation \u2014 learn how to build and publish apps with AI agents, manage credits and plans, connect Supabase and GitHub, and ship to a live URL.",
   "colors": {
     "primary": "#4366FF",
     "light": "#5B82FF",
@@ -93,5 +93,38 @@
       "discord": "https://discord.gg/uP2TQVtkRj",
       "linkedin": "https://linkedin.com/company/natively-ai"
     }
+  },
+  "seo": {
+    "indexing": "navigable",
+    "metatags": {
+      "robots": "index, follow",
+      "googlebot": "index, follow",
+      "og:site_name": "Native.Builder Docs",
+      "og:type": "website",
+      "og:locale": "en_US",
+      "twitter:card": "summary_large_image",
+      "twitter:title": "Native.Builder Docs",
+      "application-name": "Native.Builder Docs",
+      "theme-color": "#4366FF",
+      "canonical": "https://docs-builder.nativelyai.com"
+    },
+    "organization": {
+      "id": "https://nativelyai.com/#organization",
+      "name": "Natively AI",
+      "legalName": "Natively AI",
+      "url": "https://nativelyai.com",
+      "logo": "https://docs-builder.nativelyai.com/logo/icon.png",
+      "sameAs": [
+        "https://discord.gg/uP2TQVtkRj",
+        "https://linkedin.com/company/natively-ai",
+        "https://github.com/Natively-AI"
+      ]
+    }
+  },
+  "search": {
+    "prompt": "Search Native.Builder docs..."
+  },
+  "metadata": {
+    "timestamp": true
   }
 }
