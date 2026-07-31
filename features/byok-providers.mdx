@@ -11,6 +11,11 @@ Use BYOK when you want to:
 - Run higher volumes without consuming workspace credits
 - Take advantage of provider‑side pricing, rate limits, or compliance setup you already have
 
+
+<Note>
+  BYOK requires a **paid plan** or the **Lablab Builder** plan. Free workspaces need to upgrade before they can connect a provider key.
+</Note>
+
 ## Supported providers
 
 | Provider | What you get |
@@ -50,7 +55,7 @@ BYOK lives under **Settings → Integrations** alongside GitHub, Supabase, and [
 - **Billing** — Completions go directly to the provider on your key. They don't deduct Native.Builder credits.
 - **Availability** — If the key is invalid, revoked, or out of quota, BYOK models are hidden or fail at send time with the provider's error.
 - **Switching models** — You can switch between platform‑funded and BYOK models mid‑conversation; each message uses whichever model is currently selected.
-- **Plan gating** — BYOK is available on every plan. The platform's premium‑model gating only applies to platform‑funded models.
+- **Plan gating** — BYOK is available on **paid plans** and the **Lablab Builder** plan. It is not available on Free. Premium‑model gating for platform‑funded models is separate and still follows your plan.
 
 ## Next steps
 
