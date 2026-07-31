@@ -1,0 +1,65 @@
+---
+title: "GitHub Sync"
+description: "Connect GitHub in workspace Integrations, then use the Sync button to push your project to a repository."
+---
+
+**GitHub Sync** keeps a Builder project tied to a GitHub repository. You connect GitHub once for the workspace, then use the **Sync** button on each project when you want to push the latest code.
+
+## Connect GitHub
+
+<Steps>
+  <Step title="Open Integrations">
+    Go to **Settings → Integrations** and open the **GitHub** card.
+  </Step>
+  <Step title="Connect">
+    Click **Connect** and finish the GitHub authorization. Choose the account or organization that should own the repos.
+  </Step>
+  <Step title="Confirm it’s active">
+    When the connection succeeds, GitHub shows as connected in Integrations. You can disconnect later from the same screen.
+  </Step>
+</Steps>
+
+GitHub is a **workspace** integration. Every project in that workspace can sync once GitHub is connected — you don’t reconnect for each project unless you disconnected the workspace.
+
+## Use the Sync button
+
+On a project, the **Sync** control appears in the project chrome (desktop toolbar and the mobile project nav).
+
+| GitHub status | What Sync does |
+| --- | --- |
+| **Connected** | Syncs the project to GitHub. You’ll see a success toast when it finishes. |
+| **Not connected** | Shows *“GitHub isn't connected. Connect it in Integrations to sync your project.”* and opens **Settings → Integrations** on the GitHub panel so you can connect. |
+
+Tooltip copy matches the state: **Sync to GitHub** when connected, **Connect GitHub** when not.
+
+<Tip>
+  If sync fails after a long session, your GitHub token may have expired. Open **Settings → Integrations → GitHub** and reconnect, then try **Sync** again.
+</Tip>
+
+## What Sync is for
+
+- Push Builder project files to the linked GitHub repository
+- Keep a remote backup / collaborate outside Builder with normal git workflows
+- Recover cleanly when GitHub needs a reconnect instead of a confusing OAuth popup mid-sync
+
+Sync does **not** replace [Publish](/features/publish). Publish ships a live URL; Sync updates the GitHub repo.
+
+## Troubleshooting
+
+| Problem | What to try |
+| --- | --- |
+| Sync opens Integrations | GitHub isn’t connected for this workspace — complete **Connect** on the GitHub card |
+| Sync errors after it used to work | Reconnect GitHub in Integrations (expired or revoked access is common) |
+| Repo access errors | Ensure the GitHub App/install can access the repository (including “only select repositories” installs) |
+| Members can’t sync | Confirm the workspace GitHub integration is active; members can sync when GitHub is connected |
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Integrations" icon="blocks" href="/features/integrations">
+    All workspace integrations in one place.
+  </Card>
+  <Card title="Publish your app" icon="globe" href="/features/publish">
+    Ship a live URL on Builder hosting.
+  </Card>
+</CardGroup>
