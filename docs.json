@@ -61,6 +61,7 @@
           "features/custom-domain",
           "features/workspaces",
           "features/integrations",
+          "features/supabase",
           "features/github-sync",
           "features/data-connectors",
           "features/prompting",

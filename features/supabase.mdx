@@ -1,0 +1,170 @@
+---
+title: "Supabase"
+description: "Connect Supabase to your workspace, link each app to a project, and let Builder set up databases, auth, storage, and functions from chat."
+---
+
+Supabase gives your app a real database, user accounts, file storage, and server-side functions. Once you connect it, you can describe what you want in chat — for example, “let users sign up and save their favourites” — and the **Builder agent** sets up the tables, security rules, and login flow for you.
+
+This guide covers connecting Supabase, pointing an app at the right Supabase project, and the things that commonly trip people up.
+
+## Before you start
+
+You’ll need a [Supabase](https://supabase.com) account. You can create your first project during the connection flow, or let the agent guide you.
+
+You also need to be an **owner or admin** of your **Native.Builder** workspace to connect Supabase. Members can use a connection that’s already set up, but can’t create or remove one. If the **Connect** button isn’t there, ask whoever owns your workspace.
+
+## Connecting Supabase: two steps
+
+There are two separate things to do, and it’s worth knowing why.
+
+1. **Connect your Supabase account to your workspace** — one-time setup that lets Builder talk to Supabase on your behalf.
+2. **Choose which Supabase project each app uses** — your Supabase account can hold many projects (databases). Each app you build needs to be pointed at one of them.
+
+Step 1 alone doesn’t do anything visible. The Builder agent won’t touch Supabase until you’ve also done step 2.
+
+### Step 1: Connect your account
+
+<Steps>
+  <Step title="Open Integrations">
+    Go to **Settings → Integrations**.
+  </Step>
+  <Step title="Connect Supabase">
+    Find the **Supabase** card and click **Connect**.
+  </Step>
+  <Step title="Authorize">
+    A small window opens on Supabase asking you to authorize Native.Builder. Choose your **organization** — this matters more than it looks (see [Choosing the right organization](#choosing-the-right-organization)).
+  </Step>
+  <Step title="Confirm">
+    Approve, and the window closes on its own. The Supabase card shows your organization name and a connected badge.
+  </Step>
+</Steps>
+
+You can also connect from inside a project: open the **integrations** menu in the chat header and click **Connect workspace**. It’s the same workspace connection either way.
+
+### Step 2: Point your app at a Supabase project
+
+<Steps>
+  <Step title="Open your app">
+    Open the project you’re working on.
+  </Step>
+  <Step title="Open integrations">
+    Open the **integrations** menu in the chat header.
+  </Step>
+  <Step title="Select a project">
+    Click **Select a project** and pick the Supabase project this app should use. Need a new one? Use **Create a new project in Supabase** at the bottom of the list.
+  </Step>
+  <Step title="Turn Supabase on">
+    Flip the **Supabase** switch on.
+  </Step>
+</Steps>
+
+That’s it. The agent can now create tables, set up logins, store files, and write server-side functions for this app.
+
+<Note>
+  The switch won’t turn on until you’ve picked a project. If you try, you’ll see a reminder and the project list will open for you.
+</Note>
+
+You can also ask in chat — “connect this app to my Supabase project” — and the agent will show your projects and link the one you choose.
+
+## Turning Supabase on and off for an app
+
+The switch in the integrations menu controls whether the agent can work with Supabase **in this app only**.
+
+- **Off** — stops the agent from reading or changing anything in Supabase. It does **not** delete your database, data, or anything else in your Supabase project.
+- **On again** — remembers the project you’d picked before, so you don’t need to select it again.
+
+Turn it off when you want the agent to focus on the front end, or when you want to be certain it isn’t going to modify your data while you work on something else.
+
+## Choosing the right organization
+
+When you authorize Native.Builder, Supabase asks which **organization** to grant access to. Builder can then only see the projects inside that one organization.
+
+This is the single most common source of confusion. If you have more than one organization — a personal one and a team one, say — and you pick the wrong one, projects in the other organization simply won’t appear in your list. No error — they’re just not there.
+
+If a project you expect is missing, it’s almost certainly in a different organization than the one you authorized.
+
+Fixing it means **disconnecting and reconnecting**, choosing the right organization this time. There’s no way to switch organizations without disconnecting first — and disconnecting has a consequence worth reading in [Disconnecting Supabase](#disconnecting-supabase).
+
+<Tip>
+  If you have several organizations, the name on the Supabase card in Settings may not be the one you’d expect. It’s only a label. The **project list** is what tells you what you actually have access to. Sometimes the card just says **Connected**, which is also fine.
+</Tip>
+
+## Creating a Supabase project yourself
+
+You don’t have to — the agent can walk you through it — but if you create projects in the Supabase dashboard:
+
+- **New projects don’t appear instantly.** The list loads when you open it. Close the dropdown and open it again to refresh. No need to reload the page.
+- **Create it in the organization you authorized.** The create link may default to whichever org you last used in Supabase. If that’s not the connected org, the new project won’t show up in Builder.
+- **Give it a moment to finish setting up.** A brand-new project takes a minute or two to provision. It can appear in the list before it’s healthy — wait until Supabase shows it as ready.
+- **Watch for paused projects.** On Supabase’s free plan, projects pause after inactivity. A paused project still appears and can be selected, but every database operation will fail (and it can look like the agent is at fault). Un-pause it in the Supabase dashboard.
+- **Avoid duplicate project names.** If two projects share a name and you ask the agent to link one by name, it can’t tell them apart. Pick from the list in the integrations menu instead.
+
+## Disconnecting Supabase
+
+Disconnect from **Settings → Integrations → Supabase → Disconnect**.
+
+<Warning>
+  Disconnecting clears the Supabase project selection for **every app** in your workspace, not just the one you’re looking at. After reconnecting, go through each app and pick its Supabase project again.
+</Warning>
+
+That’s deliberate — it prevents an app from quietly staying pointed at a project you no longer have access to.
+
+What disconnecting does **not** do: it doesn’t touch anything inside Supabase. Databases, tables, data, users, files, and functions stay put. It only removes Native.Builder’s access.
+
+To also revoke authorization on the Supabase side, do that in your Supabase account settings — that’s a separate action.
+
+## How the agent handles secrets
+
+If your app needs an API key or other secret, the agent asks with a **masked input**, not as a normal chat message.
+
+Values entered that way go into Supabase’s secure secret storage. They never appear in the conversation, and the agent never sees them. Your app’s server-side code can read them; nobody reading the chat can.
+
+Entering a secret under a name you’ve used before **replaces** the old value. There’s no undo — double-check before saving a replacement.
+
+<Warning>
+  Never paste a secret directly into chat. If you do, delete and rotate it — anything typed into a conversation is part of that conversation’s history.
+</Warning>
+
+## Logins and preview links
+
+If you build sign-up or login into your app, the agent automatically configures Supabase to accept Builder’s **preview URLs**. Without that, logging in from the preview panel would fail.
+
+This happens behind the scenes. You only need to know about it if you later change those settings manually in the Supabase dashboard — login from previews may stop working.
+
+## Troubleshooting
+
+| Problem | What to try |
+| --- | --- |
+| Connect does nothing | Browser blocked the pop-up — allow pop-ups for Builder and try again |
+| Window closed but still disconnected | Reload the page — the connection usually went through; if not, connect again |
+| OAuth session expired | You have about ten minutes to finish authorizing after **Connect**. Start again from Settings |
+| Project missing from the list | (1) Close and reopen the dropdown (2) Confirm the project finished setup in Supabase (3) Confirm it’s in the org you authorized — usually #3 |
+| No on/off switch in the project | Workspace isn’t connected yet — connect in **Settings → Integrations** first |
+| Switch won’t turn on | Pick a Supabase project first — the list opens when you try |
+| Agent says Supabase isn’t available | Workspace integration was disconnected — reconnect, then pick the project again in the app |
+| Everything Supabase-related fails | Project paused in Supabase, connection needs reconnect, or check [status.supabase.com](https://status.supabase.com) |
+| Connection expired | Reconnect in **Settings → Integrations** (revoked auth or lost org access) |
+| Can’t find Connect / Disconnect | Only workspace owners and admins can connect or disconnect — ask your workspace owner |
+
+## Quick reference
+
+| I want to… | Where |
+| --- | --- |
+| Connect my Supabase account | **Settings → Integrations → Supabase → Connect** |
+| Point an app at a Supabase project | App → **integrations** menu → **Select a project** |
+| Pause the agent’s Supabase access for one app | App → **integrations** menu → toggle off |
+| Switch which Supabase project an app uses | App → **integrations** menu → pick a different project |
+| Switch Supabase organizations | Disconnect, then reconnect and choose the other org (clears all app selections) |
+| Remove Supabase entirely | **Settings → Integrations → Supabase → Disconnect** |
+| Create a new Supabase project | App → **integrations** menu → **Create a new project in Supabase** |
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Integrations" icon="blocks" href="/features/integrations">
+    All workspace integrations in one place.
+  </Card>
+  <Card title="GitHub Sync" icon="github" href="/features/github-sync">
+    Connect GitHub and sync project code.
+  </Card>
+</CardGroup>
