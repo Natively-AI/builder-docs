@@ -63,6 +63,7 @@
           "features/integrations",
           "features/supabase",
           "features/github-sync",
+          "features/files-and-download",
           "features/data-connectors",
           "features/prompting",
           "features/byok-providers"
