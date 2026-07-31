@@ -2,7 +2,14 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
   "name": "Native.Builder Docs",
-  "description": "Native.Builder is a software factory — specialized AI agents that build and ship products so you save time and money.",
+  "description": "Native.Builder is an AI software factory — a model-agnostic execution stack where specialized agents build, ship, and iterate owned AI-native apps for teams, enterprises, and agencies.",
+  "seo": {
+    "indexing": "navigable",
+    "metatags": {
+      "og:site_name": "Native.Builder Docs",
+      "twitter:card": "summary_large_image"
+    }
+  },
   "colors": {
     "primary": "#4366FF",
     "light": "#5B82FF",
@@ -43,6 +50,7 @@
         "group": "Introduction",
         "icon": "sparkles",
         "pages": [
+          "introduction/ai-software-factory",
           "introduction/welcome",
           "introduction/getting-started",
           "introduction/plans-and-credits",
