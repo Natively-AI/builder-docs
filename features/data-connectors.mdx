@@ -1,0 +1,53 @@
+---
+title: "Data connectors"
+description: "Connect Google Drive or Dropbox and use those files as sources while Builder builds your app."
+---
+
+Data connectors let **Native.Builder** pull files from cloud storage into your workflow. Connect a provider once at the workspace level, then reference those files while you chat and build.
+
+## Supported connectors
+
+| Provider | Use it for |
+| --- | --- |
+| **Google Drive** | Docs, sheets, slides, and other Drive files your workspace can access |
+| **Dropbox** | Files and folders from a connected Dropbox account |
+
+Connected files can inform what Builder generates — briefs, copy, assets, and structured data — without manually re-uploading everything into every project.
+
+## Connect a provider
+
+<Steps>
+  <Step title="Open workspace settings">
+    From the sidebar, open **Settings** for your workspace.
+  </Step>
+  <Step title="Find data connectors">
+    Open the integrations / data connectors section and choose **Google Drive** or **Dropbox**.
+  </Step>
+  <Step title="Authorize access">
+    Complete the provider sign-in and grant the permissions Builder requests.
+  </Step>
+  <Step title="Use files while you build">
+    In chat, attach or reference connected files the same way you would uploads — Builder can read them as context for the project.
+  </Step>
+</Steps>
+
+<Note>
+  Connector access is scoped to the workspace. Anyone in the workspace who can use chat may work with files the connector makes available, subject to the permissions you granted at the provider.
+</Note>
+
+## Tips
+
+- Connect the account that already holds your product specs, brand assets, or research — then ask Builder to use a specific file by name
+- Prefer sharing only the folders you need; you can disconnect a provider anytime from the same settings screen
+- For one-off files, you can still [upload or paste attachments in chat](/features/prompting)
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Prompting best practices" icon="sparkles" href="/features/prompting">
+    Attach images and files, and steer Builder with clearer prompts.
+  </Card>
+  <Card title="Workspaces" icon="building-2" href="/features/workspaces">
+    How members, billing, and workspace settings fit together.
+  </Card>
+</CardGroup>
