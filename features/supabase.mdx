@@ -162,6 +162,10 @@ This happens behind the scenes. You only need to know about it if you later chan
 | Remove Supabase entirely | **Settings → Integrations → Supabase → Disconnect** |
 | Create a new Supabase project | App → **integrations** menu → **Create a new project in Supabase** |
 
+## Speechmatics and other API keys
+
+Apps that call third-party APIs (for example [Speechmatics](/features/speechmatics) speech-to-text) store secrets through Supabase Edge Functions so keys never ship in the browser. Connect Supabase first, then ask Builder to add the integration.
+
 ## Next steps
 
 <CardGroup cols={2}>

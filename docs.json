@@ -63,6 +63,7 @@
           "features/workspaces",
           "features/integrations",
           "features/supabase",
+          "features/speechmatics",
           "features/github-sync",
           "features/files-and-download",
           "features/data-connectors",

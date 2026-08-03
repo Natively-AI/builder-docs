@@ -1,0 +1,124 @@
+---
+title: "Build a Speechmatics app with Native.Builder"
+sidebarTitle: "Speechmatics"
+description: "Use Speechmatics speech-to-text in Native.Builder — ask the Builder agent to add live or batch transcription; watch a demo and follow the secure Supabase setup."
+keywords: ["speechmatics", "speech to text", "transcription", "real-time", "voice", "native.builder", "supabase"]
+"og:title": "Build a Speechmatics app with Native.Builder"
+"og:description": "Use Speechmatics speech-to-text in Native.Builder — ask the Builder agent to add live or batch transcription; watch a demo and follow the secure Supabase setup."
+---
+
+[Speechmatics](https://www.speechmatics.com) is a speech-to-text platform built for real-world audio. It offers **real-time** and **batch** transcription across **56+ languages**, with low latency (partials often under ~500ms), high accuracy, speaker diarization, custom dictionaries, and word-level timings. Teams use it for live captions, voice interfaces, call transcription, and media workflows — via cloud APIs (including WebSocket real-time streaming). See Speechmatics’ [real-time product](https://www.speechmatics.com/product/real-time) and [transcription overview](https://www.speechmatics.com/product/transcription).
+
+In **Native.Builder**, you don’t wire the Speechmatics API by hand. You describe the product you want — for example a live voice-to-text app — and ask the **Builder agent** to implement it with Speechmatics. Builder generates the UI, connects the secure backend path, and prompts you for your Speechmatics API key when it’s needed.
+
+## Demo
+
+Watch a Builder-built Speechmatics app in action — live voice transcription powered by Speechmatics, with the API key kept server-side:
+
+<Frame caption="Demo: Speechmatics speech-to-text app built with Native.Builder">
+  <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+    <iframe
+      src="https://customer-6158v2ccd1jgc68w.cloudflarestream.com/2503f85a87304da5b31b7800e3280f8f/iframe"
+      title="Speechmatics app built with Native.Builder"
+      style={{ border: "none", position: "absolute", top: 0, left: 0, height: "100%", width: "100%" }}
+      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+      allowFullScreen
+    />
+  </div>
+</Frame>
+
+Prefer watching outside the docs? Open the [Stream player](https://customer-6158v2ccd1jgc68w.cloudflarestream.com/2503f85a87304da5b31b7800e3280f8f/watch).
+
+## What you can build
+
+Ask Builder for apps that need speech understanding, for example:
+
+- Live captions or a “speak and see text” notepad
+- Meeting or interview notes from a microphone or uploaded audio
+- Voice-driven forms and search
+- Multi-language transcription UIs (Speechmatics supports 56+ languages)
+
+Builder can use Speechmatics for **real-time** streaming transcription and/or **batch** jobs on recorded files, depending on what you ask for.
+
+## Build it by asking Builder
+
+You don’t need to memorize Speechmatics SDKs. In a project chat, prompt the Builder agent in plain language.
+
+**Example prompt:**
+
+> Build a voice-to-text app using Speechmatics. I want to click a mic button, speak, and see live transcription on screen. Keep my Speechmatics API key secure — never expose it in the browser.
+
+Then:
+
+1. Let Builder scaffold the UI and wiring
+2. When it asks for your Speechmatics API key, paste it into the **masked secret** field (not into the chat)
+3. Try the preview — speak and confirm transcripts appear
+4. [Publish](/features/publish) when you’re happy
+
+<Tip>
+  Start with Product Architect if you want a short PRD (languages, real-time vs batch, speaker labels), then switch to the **Builder agent** to implement.
+</Tip>
+
+## Requirements
+
+Speechmatics in Builder uses a **secure path**:
+
+| Requirement | Why |
+| --- | --- |
+| **[Supabase](/features/supabase) connected** to the project | Deployed Builder apps are static frontends. Your Speechmatics key is stored as a Supabase Edge Function secret — not in client code. |
+| **Your own Speechmatics API key** | BYOK — usage bills to your Speechmatics account. Get a key from the [Speechmatics portal](https://www.speechmatics.com). |
+| **Paid / eligible workspace for secrets flow** | Follow the same [Supabase](/features/supabase) connect + project-link steps you use for any database-backed app. |
+
+How security works at a high level:
+
+- The raw Speechmatics key stays in Supabase secret storage
+- For **real-time**, an Edge Function can mint a **short-lived** Speechmatics token; the browser only uses that temporary token on the WebSocket
+- For **batch**, the Edge Function calls Speechmatics server-side; the browser talks only to your Edge Function
+
+Never paste your Speechmatics API key into the chat transcript. If you do, rotate it in Speechmatics and store a new secret through Builder’s masked input.
+
+## Setup checklist
+
+<Steps>
+  <Step title="Connect Supabase">
+    Connect your workspace and link this app to a Supabase project. Guide: [Supabase](/features/supabase).
+  </Step>
+  <Step title="Brief Builder">
+    Ask for a Speechmatics-powered feature (real-time, batch, or both) in your own words.
+  </Step>
+  <Step title="Provide your API key when prompted">
+    Use the masked secret field so the key goes into Supabase — not into chat history.
+  </Step>
+  <Step title="Test in preview">
+    Grant mic permissions if needed, run a short recording, and confirm transcripts.
+  </Step>
+  <Step title="Publish">
+    Ship to a live URL with [Publish](/features/publish).
+  </Step>
+</Steps>
+
+## Prompt ideas
+
+| Goal | Try saying |
+| --- | --- |
+| Live captions | “Add Speechmatics real-time transcription with a mic button and a live transcript panel.” |
+| Upload audio | “Let me upload a WAV/MP3 and run Speechmatics batch transcription, then show the full text.” |
+| Speakers | “Use Speechmatics diarization so each speaker is labeled in the transcript.” |
+| Languages | “Default to English but let me pick another Speechmatics language from a dropdown.” |
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Supabase" icon="database" href="/features/supabase">
+    Connect the workspace and link a project — required for secure Speechmatics keys.
+  </Card>
+  <Card title="Prompting" icon="sparkles" href="/features/prompting">
+    Write clearer briefs so Builder ships the right voice UI on the first pass.
+  </Card>
+  <Card title="Integrations" icon="blocks" href="/features/integrations">
+    Other workspace connections (GitHub, BYOK models, Drive, Dropbox).
+  </Card>
+  <Card title="Speechmatics docs" icon="book-open" href="https://docs.speechmatics.com">
+    Official API reference for real-time and batch transcription.
+  </Card>
+</CardGroup>
