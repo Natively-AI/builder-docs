@@ -69,6 +69,14 @@
           "features/prompting",
           "features/byok-providers"
         ]
+      },
+      {
+        "group": "Partners",
+        "icon": "handshake",
+        "pages": [
+          "partners/speechmatics",
+          "partners/bright-data"
+        ]
       }
     ]
   },
