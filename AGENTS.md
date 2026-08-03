@@ -1,8 +1,8 @@
-# Native.Builder documentation
+# native.builder documentation
 
 ## About this project
 
-- Product documentation for [Native.Builder](https://nativelyai.com) (short: **Builder**), built on [Mintlify](https://mintlify.com)
+- Product documentation for [native.builder](https://nativelyai.com) (short: **Builder**), built on [Mintlify](https://mintlify.com)
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
 - Run `mint dev` to preview locally
@@ -12,7 +12,7 @@
 
 | Term | Usage |
 |------|--------|
-| **Native.Builder** | Full product name. Short form: **Builder**. Never use "Natively" for the product. |
+| **native.builder** | Full product name — always lowercase (`native.builder`), optionally with the `brand-name` class for small-caps styling. Short form: **Builder**. Never use "Natively" for the product. |
 | **Builder agent** | The coding agent in the agent roster — always say "Builder agent" to distinguish from the product or the Builder plan |
 | **Builder plan** | The $20/mo subscription tier — always say "Builder plan" to distinguish from the product |
 | **Software factory** | Core positioning — agents produce software on a production line |
@@ -42,7 +42,7 @@ See `logo/README.md` for export specs. **PNG is supported** — replace files in
 - Bold for UI elements: Click **Settings**
 - Code formatting for file names, commands, paths, and code references
 - Link to the live app at `https://nativelyai.com` when referencing in-product actions
-- First mention on a page: **Native.Builder**. Subsequent mentions in the same section: **Builder**
+- First mention on a page: **native.builder** (lowercase). Subsequent mentions in the same section: **Builder**
 
 ## Content boundaries
 
@@ -70,7 +70,7 @@ See `logo/README.md` for export specs. **PNG is supported** — replace files in
 
 Rules for changelog entries (humans and automations):
 
-- Only ship changes that affect how customers build, collaborate, or ship in **Native.Builder**
+- Only ship changes that affect how customers build, collaborate, or ship in **native.builder**
 - Prefer source text from `Natively-AI/conductor-2.0` files matching `changelog/v*-user.md` — those are the approved public summaries
 - Ignore engineering-only notes in `changelog/vX.Y.Z.md` (no `-user` suffix)
 - Match terminology in this file; never call the product "Natively"

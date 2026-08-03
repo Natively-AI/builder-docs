@@ -1,9 +1,9 @@
 ---
-title: "Connect Supabase to Native.Builder"
+title: "Connect Supabase to native.builder"
 sidebarTitle: "Supabase"
 description: "Connect Supabase to your workspace, link each app to a project, toggle agent access, store secrets, and fix common auth issues."
 keywords: ["supabase", "database", "auth", "postgres", "storage", "connect supabase"]
-"og:title": "Connect Supabase to Native.Builder"
+"og:title": "Connect Supabase to native.builder"
 "og:description": "Connect Supabase to your workspace, link each app to a project, toggle agent access, store secrets, and fix common auth issues."
 ---
 
@@ -15,7 +15,7 @@ This guide covers connecting Supabase, pointing an app at the right Supabase pro
 
 You’ll need a [Supabase](https://supabase.com) account. You can create your first project during the connection flow, or let the agent guide you.
 
-You also need to be an **owner or admin** of your **Native.Builder** workspace to connect Supabase. Members can use a connection that’s already set up, but can’t create or remove one. If the **Connect** button isn’t there, ask whoever owns your workspace.
+You also need to be an **owner or admin** of your <span class="brand-name">native.builder</span> workspace to connect Supabase. Members can use a connection that’s already set up, but can’t create or remove one. If the **Connect** button isn’t there, ask whoever owns your workspace.
 
 ## Connecting Supabase: two steps
 
@@ -36,7 +36,7 @@ Step 1 alone doesn’t do anything visible. The Builder agent won’t touch Supa
     Find the **Supabase** card and click **Connect**.
   </Step>
   <Step title="Authorize">
-    A small window opens on Supabase asking you to authorize Native.Builder. Choose your **organization** — this matters more than it looks (see [Choosing the right organization](#choosing-the-right-organization)).
+    A small window opens on Supabase asking you to authorize native.builder. Choose your **organization** — this matters more than it looks (see [Choosing the right organization](#choosing-the-right-organization)).
   </Step>
   <Step title="Confirm">
     Approve, and the window closes on its own. The Supabase card shows your organization name and a connected badge.
@@ -81,7 +81,7 @@ Turn it off when you want the agent to focus on the front end, or when you want 
 
 ## Choosing the right organization
 
-When you authorize Native.Builder, Supabase asks which **organization** to grant access to. Builder can then only see the projects inside that one organization.
+When you authorize native.builder, Supabase asks which **organization** to grant access to. Builder can then only see the projects inside that one organization.
 
 This is the single most common source of confusion. If you have more than one organization — a personal one and a team one, say — and you pick the wrong one, projects in the other organization simply won’t appear in your list. No error — they’re just not there.
 
@@ -113,7 +113,7 @@ Disconnect from **Settings → Integrations → Supabase → Disconnect**.
 
 That’s deliberate — it prevents an app from quietly staying pointed at a project you no longer have access to.
 
-What disconnecting does **not** do: it doesn’t touch anything inside Supabase. Databases, tables, data, users, files, and functions stay put. It only removes Native.Builder’s access.
+What disconnecting does **not** do: it doesn’t touch anything inside Supabase. Databases, tables, data, users, files, and functions stay put. It only removes native.builder’s access.
 
 To also revoke authorization on the Supabase side, do that in your Supabase account settings — that’s a separate action.
 

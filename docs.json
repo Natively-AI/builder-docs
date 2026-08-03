@@ -1,8 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "Native.Builder Docs",
-  "description": "Native.Builder is an AI software factory \u2014 official docs for building and publishing owned AI-native apps with agents, credits, Supabase, GitHub Sync, and a model-agnostic execution stack.",
+  "name": "native.builder docs",
+  "description": "native.builder is an AI software factory \u2014 official docs for building and publishing owned AI-native apps with agents, credits, Supabase, GitHub Sync, and a model-agnostic execution stack.",
   "colors": {
     "primary": "#4366FF",
     "light": "#5B82FF",
@@ -101,12 +101,12 @@
     "metatags": {
       "robots": "index, follow",
       "googlebot": "index, follow",
-      "og:site_name": "Native.Builder Docs",
+      "og:site_name": "native.builder docs",
       "og:type": "website",
       "og:locale": "en_US",
       "twitter:card": "summary_large_image",
-      "twitter:title": "Native.Builder Docs",
-      "application-name": "Native.Builder Docs",
+      "twitter:title": "native.builder docs",
+      "application-name": "native.builder docs",
       "theme-color": "#4366FF",
       "canonical": "https://docs-builder.nativelyai.com"
     },
@@ -124,7 +124,7 @@
     }
   },
   "search": {
-    "prompt": "Search Native.Builder docs..."
+    "prompt": "Search native.builder docs..."
   },
   "metadata": {
     "timestamp": true
