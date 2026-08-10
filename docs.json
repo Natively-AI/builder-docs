@@ -61,6 +61,7 @@
           "features/publish",
           "features/custom-domain",
           "features/workspaces",
+          "features/referral-program",
           "features/integrations",
           "features/supabase",
           "features/github-sync",
