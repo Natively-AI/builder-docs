@@ -67,7 +67,8 @@
           "features/files-and-download",
           "features/data-connectors",
           "features/prompting",
-          "features/byok-providers"
+          "features/byok-providers",
+          "features/referral-program"
         ]
       },
       {
