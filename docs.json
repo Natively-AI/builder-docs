@@ -95,7 +95,7 @@
     "primary": {
       "type": "button",
       "label": "Open app",
-      "href": "https://beta.nativelyai.com"
+      "href": "https://builder.nativelyai.com"
     }
   },
   "footer": {
