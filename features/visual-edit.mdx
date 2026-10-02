@@ -1,0 +1,64 @@
+---
+title: "Visual edit in preview"
+sidebarTitle: "Visual edit"
+description: "Click an element in the live preview to edit it directly in native.builder, without writing a chat prompt — and know when to go back to chat instead."
+keywords: ["visual edit", "click to edit", "preview", "select element", "wysiwyg"]
+"og:title": "Visual edit in preview"
+"og:description": "Click an element in the live preview to edit it directly in native.builder, without writing a chat prompt — and know when to go back to chat instead."
+---
+
+Visual edit lets you change something in your app by clicking it in the live preview, instead of describing the change in chat. It's the fastest way to make small, direct tweaks — wording, spacing, color, an image — on an element you can already see.
+
+## Enter visual edit mode
+
+<Steps>
+  <Step title="Open your project preview">
+    Open the project you're working on. The live preview sits next to chat.
+  </Step>
+  <Step title="Turn on visual edit">
+    Click the toggle in the preview panel. It reads **Select element** when it's off.
+  </Step>
+  <Step title="Pick an element">
+    Hover over the preview to see elements highlight, then click the one you want to change. The toggle now reads **Editing**.
+  </Step>
+  <Step title="Make your change">
+    Use the edit controls that appear for that element — text, style, or spacing, depending on what you selected.
+  </Step>
+</Steps>
+
+A show/hide control on the toolbar lets you collapse it out of the way without leaving visual edit mode, then bring it back when you need it again.
+
+## Click-to-edit vs. prompting in chat
+
+Both change your app, but they work differently:
+
+| | Click-to-edit (visual edit) | Prompting in chat |
+| --- | --- | --- |
+| **Scope** | One selected element at a time | Anything — one element, a whole page, or logic across files |
+| **What it changes** | Visual properties: text, color, spacing, size, images | Visual changes, new features, data/backend logic, new pages, structural changes |
+| **How it works** | Direct manipulation — you see the result as you make it | The **Builder agent** reasons about your request, then edits the underlying code |
+| **Best for** | "Make this heading bigger," "change this button's color," "fix this typo" | "Add a filter to this list," "connect this form to Supabase," "restructure this page" |
+
+Visual edit is a shortcut for changes you could describe in one short sentence and see immediately. Once a change involves new behavior, new data, or more than one part of the app, it's a chat prompt to the Builder agent, not a visual edit.
+
+## Limitations
+
+Visual edit only works on what's already rendered and visually selectable in the preview. It can't:
+
+- Add new features, components, or pages
+- Change data, logic, or backend behavior (database calls, auth rules, server functions)
+- Restructure layout in ways that go beyond the selected element's own properties
+- Touch anything not currently visible in the preview (for example, a different route or a hidden state)
+
+For any of that, turn visual edit off (or just start typing) and prompt the agent in chat instead. See [Prompting best practices](/features/prompting) for how to write a clear brief.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Prompting best practices" icon="sparkles" href="/features/prompting">
+    Get better results when a change needs a chat prompt instead.
+  </Card>
+  <Card title="Getting started" icon="rocket" href="/introduction/getting-started">
+    See where visual edit fits in your first project.
+  </Card>
+</CardGroup>

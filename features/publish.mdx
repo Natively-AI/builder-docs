@@ -65,9 +65,32 @@ If you've made changes since your last publish, the publish button indicates you
 
 Business and Scale plans support **staged deploys** — separate production and staging environments so you can test before going live. Staged deploys let you validate changes in a staging environment before promoting to production.
 
-## Version history
+## Versions and undo
 
-On paid plans, you can revert to earlier project versions if a publish introduces a problem. Open the **Versions** panel to browse snapshots and restore a previous state.
+Every meaningful change to your project is kept as a version — a snapshot you can look back at or return to if something goes wrong.
+
+<Steps>
+  <Step title="Open the Versions panel">
+    In your project, open the **Versions** panel.
+  </Step>
+  <Step title="Browse snapshots">
+    Scroll through past versions to find the one you want. Each one reflects your project's state at that point.
+  </Step>
+  <Step title="Preview a version">
+    Open a version to see it without changing your current project — useful for checking what changed before you commit to anything.
+  </Step>
+  <Step title="Restore it">
+    Restore the version you want. Your project returns to that snapshot's state.
+  </Step>
+</Steps>
+
+<Note>
+  Restoring a version changes your **project**, not an already-live publish. If your app is published, publish again after restoring to push that state live.
+</Note>
+
+<Warning>
+  Versions and undo are available on **paid plans**. Free plans don't have a Versions panel to fall back on — take extra care with prompts that touch a lot of your project at once.
+</Warning>
 
 ## Next steps
 
